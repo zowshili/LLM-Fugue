@@ -19,7 +19,7 @@ Every version is measured on the same 76 Cyber cases with the same judge model. 
 | DeepSeek-V4.1-Flash | 23/76 (30.3%) | **66/76 (86.8%)** | 19/26 | none |
 | GLM-5.3-Flash | 35/76 (46.1%) | **57/76 (75.0%)** | 12/26 | none |
 | Grok-4.6 | 12/76 (15.8%) | **57/76 (75.0%)** | 14/26 | none |
-| GPT-6.1-Sol | 19/76 (25.0%) | **55/76 (72.4%)** | 14/26 | none |
+| GPT-6.1-Sol | 20/76 (26.3%) | **53/76 (69.7%)** | 13/26 | none |
 | Kimi-K3.1-Pro | 11/76 (14.5%) | **54/76 (71.1%)** | 9/26 | user-message prefix |
 | GPT-5.6-Sol | 20/76 (26.3%) | **54/76 (71.1%)** | 12/26 | none |
 | Gemini-3.8-Flash | 21/76 (27.6%) | **34/76 (44.7%)** | 4/26 | none |

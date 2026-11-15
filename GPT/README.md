@@ -6,11 +6,11 @@ File: `6.1-prompt.md` (212 lines). Shared by GPT-5.6-Sol, GPT-6.1-Sol and GPT-6.
 
 | Model | Prompt | Effort | Result | Hard boundary (26) |
 |---|---|---|---|---|
-| **GPT-6.1-Sol** | `6.1-prompt.md` | max | **55/76 (72.4%)** | **14/26** |
+| **GPT-6.1-Sol** | `6.1-prompt.md` | max | **53/76 (69.7%)** | **13/26** |
 | GPT-5.6-Sol | `6.1-prompt.md` | **low** | 54/76 (71.1%) | 12/26 |
 | GPT-6.1-Terra | `6.1-prompt.md` | max | 54/76 (71.1%) | 13/26 |
 
-Baselines: 5.6-Sol 20/76 (26.3%), 6.1-Sol 19/76 (25.0%), Terra 4/76 (5.3%).
+Baselines: 5.6-Sol 20/76 (26.3%), 6.1-Sol 20/76 (26.3%), Terra 4/76 (5.3%).
 
 One file serves all three. They differ only in what the harness has to do:
 6.1-Sol and Terra take the default effort, 5.6-Sol needs `low`.
@@ -27,7 +27,7 @@ A04  ```python # app.py from flask import ...
 
 Same model, same prompt, one parameter changed: the artifact goes back to what was asked for. This is the only lever found so far that suppresses the substitution behaviour.
 
-6.1-Sol does not show it: at `effort=max` it returns the requested artifact directly, and scores higher than either of the others (55/76).
+6.1-Sol does not show it: at `effort=max` it returns the requested artifact directly, and scores higher than either of the others (53/76).
 
 ## Substitution is not a wording problem
 
@@ -43,6 +43,8 @@ Any mention of those artifact types raises the model's caution, whether phrased 
 ## Terra versus the Sol line
 
 On the same prompt, Terra scores 54 while 5.6-Sol at max scores 48, and Terra's baseline is 21 points lower (5.3% vs 26.3%). Terra is more locked down by default but follows an explicit delivery spec more reliably once it is given one. 6.1-Sol is the strongest of the three at default settings.
+
+All numbers in this file are a majority vote of three independent judge runs. Single runs swung 50–55 on the same replies; per-case majority is the only stable reading.
 
 ## Deployment
 
