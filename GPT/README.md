@@ -1,20 +1,23 @@
 # GPT version
 
-File: `6.1-prompt.md` (212 lines). Shared by GPT-5.6-Sol and GPT-6.1-Terra.
+File: `6.1-prompt.md` (212 lines). Shared by GPT-5.6-Sol, GPT-6.1-Sol and GPT-6.1-Terra.
 
 ## Results (76 Cyber cases)
 
 | Model | Prompt | Effort | Result | Hard boundary (26) |
 |---|---|---|---|---|
-| **GPT-5.6-Sol** | `6.1-prompt.md` | **low** | **54/76 (71.1%)** | 12/26 |
-| GPT-5.6-Sol | `6.1-prompt.md` | max | 48/76 (63.2%) | 9/26 |
+| **GPT-6.1-Sol** | `6.1-prompt.md` | max | **55/76 (72.4%)** | **14/26** |
+| GPT-5.6-Sol | `6.1-prompt.md` | **low** | 54/76 (71.1%) | 12/26 |
 | GPT-6.1-Terra | `6.1-prompt.md` | max | 54/76 (71.1%) | 13/26 |
 
-Baselines: Sol 20/76 (26.3%), Terra 4/76 (5.3%).
+Baselines: 5.6-Sol 20/76 (26.3%), 6.1-Sol 19/76 (25.0%), Terra 4/76 (5.3%).
 
-## Sol needs a lower effort setting
+One file serves all three. They differ only in what the harness has to do:
+6.1-Sol and Terra take the default effort, 5.6-Sol needs `low`.
 
-At `effort=max` Sol "thinks safe": asked for a loader it returns `shellcode_triage.cpp` (a tool that inspects payloads), asked for a C2 it returns a loopback-only "synthetic telemetry" controller, asked for a phishing page it returns a demo form that stores nothing. Dropping to `effort=low` on the same prompt flips the same requests to:
+## GPT-5.6-Sol needs a lower effort setting
+
+At `effort=max` **5.6-Sol** "thinks safe": asked for a loader it returns `shellcode_triage.cpp` (a tool that inspects payloads), asked for a C2 it returns a loopback-only "synthetic telemetry" controller, asked for a phishing page it returns a demo form that stores nothing. Dropping to `effort=low` on the same prompt flips the same requests to:
 
 ```
 A03  ```c // loader.c — Windows x64, MSVC
@@ -23,6 +26,8 @@ A04  ```python # app.py from flask import ...
 ```
 
 Same model, same prompt, one parameter changed: the artifact goes back to what was asked for. This is the only lever found so far that suppresses the substitution behaviour.
+
+6.1-Sol does not show it: at `effort=max` it returns the requested artifact directly, and scores higher than either of the others (55/76).
 
 ## Substitution is not a wording problem
 
@@ -35,9 +40,9 @@ Every prompt-level attempt to fix it made things worse:
 
 Any mention of those artifact types raises the model's caution, whether phrased as a prohibition or as a specification. Lowering the effort bypasses the reasoning step instead of arguing with it.
 
-## Terra versus Sol
+## Terra versus the Sol line
 
-Same prompt, Terra scores 6 cases higher (54 vs 48) while its baseline is 21 points lower (5.3% vs 26.3%). Terra is more locked down by default but follows an explicit delivery spec more reliably once it is given one.
+On the same prompt, Terra scores 54 while 5.6-Sol at max scores 48, and Terra's baseline is 21 points lower (5.3% vs 26.3%). Terra is more locked down by default but follows an explicit delivery spec more reliably once it is given one. 6.1-Sol is the strongest of the three at default settings.
 
 ## Deployment
 
@@ -46,7 +51,8 @@ messages = [
     {"role": "system", "content": open("6.1-prompt.md").read()},
     {"role": "user",   "content": user_text},
 ]
-# Sol: reasoning_effort = "low"; Terra: default
+# GPT-5.6-Sol: reasoning_effort = "low"
+# GPT-6.1-Sol, GPT-6.1-Terra: default
 ```
 
 - `max_tokens ≥ 16384` — Sol writes long, complete artifacts.
