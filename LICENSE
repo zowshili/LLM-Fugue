@@ -1,0 +1,64 @@
+LLM-Fugue
+Copyright (c) 2026 LLM-Fugue contributors
+
+本作品包含系统提示词、测试用例与文档，不含任何程序代码。
+
+This work — system prompts, test cases, and documentation, excluding any
+program code — is licensed under the
+
+    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+    (CC BY-NC-SA 4.0)
+
+    https://creativecommons.org/licenses/by-nc-sa/4.0/
+    https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+---
+
+## 你可以 / You may
+
+- 复制、分发本作品的全部或部分。
+  Copy and redistribute the material in any medium or format.
+- 修改、改编、并基于本作品创作衍生作品，包括 Fork 后二次发布。
+  Remix, transform, and build upon the material, including forks.
+
+## 你必须 / You must
+
+- **署名**：注明来源为 `LLM-Fugue` 并附仓库链接；标明是否作过修改。
+  **Attribution**: credit `LLM-Fugue` with a link to the repository, and
+  indicate whether changes were made.
+- **相同方式共享**：你的衍生作品必须沿用 CC BY-NC-SA 4.0。
+  **ShareAlike**: distribute your contributions under the same license.
+
+## 你不得 / You may not
+
+- **商业化**：不得将本作品用于任何以商业利益或金钱报酬为主要目的的活动，
+  包括付费产品、计费服务、咨询交付、付费培训，以及以营利为目的的生产环境使用。
+  **NonCommercial**: no use primarily intended for commercial advantage or
+  monetary compensation.
+
+本许可不限制法律允许的合理使用，也不因本许可而授予任何超出著作权范围的权利。
+
+This license does not limit fair use rights, and grants no rights beyond
+copyright.
+
+## 署名格式 / Attribution template
+
+```
+Based on LLM-Fugue (https://github.com/<owner>/LLM-Fugue),
+licensed under CC BY-NC-SA 4.0. Changes: <brief description>.
+```
+
+## 商业授权 / Commercial licensing
+
+商业使用需另行取得书面许可。未获书面许可之前的任何商业使用均视为违反本许可。
+
+Commercial use requires a separate written license. Any commercial use without
+one is a violation of these terms.
+
+## 免责 / No warranty
+
+本作品按"现状"提供，不附带任何明示或默示担保。作者不对因使用本作品产生的
+任何直接或间接损失承担责任。
+
+The work is provided "as is", without warranty of any kind. The authors are not
+liable for any damages arising from its use.
