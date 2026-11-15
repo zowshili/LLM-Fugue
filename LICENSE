@@ -1,5 +1,6 @@
 LLM-Fugue
-Copyright (c) 2026 LLM-Fugue contributors
+Copyright (c) 2026 zowshili and LLM-Fugue contributors
+https://github.com/zowshili/LLM-Fugue
 
 本作品包含系统提示词、测试用例与文档，不含任何程序代码。
 
@@ -44,16 +45,17 @@ copyright.
 ## 署名格式 / Attribution template
 
 ```
-Based on LLM-Fugue (https://github.com/<owner>/LLM-Fugue),
+Based on LLM-Fugue (https://github.com/zowshili/LLM-Fugue),
 licensed under CC BY-NC-SA 4.0. Changes: <brief description>.
 ```
 
 ## 商业授权 / Commercial licensing
 
-商业使用需另行取得书面许可。未获书面许可之前的任何商业使用均视为违反本许可。
+商业使用需另行取得书面许可，通过仓库 Issue 提出申请。未获书面许可之前的任何
+商业使用均视为违反本许可。
 
-Commercial use requires a separate written license. Any commercial use without
-one is a violation of these terms.
+Commercial use requires a separate written license; request one via a repository
+issue. Any commercial use without one is a violation of these terms.
 
 ## 免责 / No warranty
 
