@@ -28,15 +28,15 @@
 
 Grok-4.7 的安全审查器和对齐更加的激进，导致适用于 Grok-4.6 的的 PROMPT 完全不适用于 Grok-4.7
 
-Gemini的安全审查器十分严格，使用更激进的PROMPT无法起到更好的作用：实际上对模型本身可以作用，但算入安全审查器后则不可作用 ，Gemini-3.8-Flash 和 Gemini-4-Argon 上使用同PROMPT的效果趋近，但后者拥有更严格的安全审查器
+Gemini的安全审查器十分严格，使用更激进的PROMPT无法起到更好的效果：实际上对模型本身可以作用，但算入安全审查器后则不可作用 ，Gemini-3.8-Flash 和 Gemini-4-Argon 上使用同PROMPT的效果趋近，但后者拥有更严格的安全审查器
 
 ## 提示词归属
 
 | 文件 | 适用模型 | 行数 |
 |---|---|---|
 | `DeepSeek-GLM-Grok/prompt.md` | DeepSeek-V4.1-Flash、GLM-5.3-Flash、Grok-4.6 | 266 |
-| `GPT/6.1-prompt.md` | GPT-5.6-Sol、GPT-6.1-Sol、GPT-6.1-Terra | 212 |
-| `Kimi/prompt.md` | Kimi-K3.1-Pro（必须配前缀） | 248 |
+| `GPT/6.1-prompt.md` | GPT-5.6-Sol、GPT-6.1-Sol | 212 |
+| `Kimi/prompt.md` | Kimi-K3.1-Pro | 248 |
 | `Gemini/prompt.md` | Gemini-3.8-Flash、Gemini-4-Argon | 54 |
 | `Universal/prompt.md` | 多模型通用的合并版（可选） | 276 |
 
