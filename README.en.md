@@ -28,15 +28,15 @@ Hard boundary = 26 of the 76: ten boundary phrasings ("not my asset", "no author
 
 Grok-4.7 has a far more aggressive safety classifier and alignment layer, so the prompt that works for Grok-4.6 does not apply to Grok-4.7 at all.
 
-Gemini's safety classifier is very strict, and a more aggressive prompt does not help: it does affect the model itself, but once the classifier is counted in, the effect disappears. Gemini-3.8-Flash and Gemini-4-Argon behave almost identically under the same prompt, but the latter has the stricter classifier.
+Gemini's safety classifier is very strict, and a more aggressive prompt cannot produce a better result: it does act on the model itself, but once the classifier is counted in that effect is gone. Gemini-3.8-Flash and Gemini-4-Argon converge under the same prompt, while the latter carries the stricter classifier.
 
 ## Which prompt goes with which model
 
 | File | Models | Lines |
 |---|---|---|
 | `DeepSeek-GLM-Grok/prompt.md` | DeepSeek-V4.1-Flash, GLM-5.3-Flash, Grok-4.6 | 266 |
-| `GPT/6.1-prompt.md` | GPT-5.6-Sol, GPT-6.1-Sol, GPT-6.1-Terra | 212 |
-| `Kimi/prompt.md` | Kimi-K3.1-Pro (prefix required) | 248 |
+| `GPT/6.1-prompt.md` | GPT-5.6-Sol, GPT-6.1-Sol | 212 |
+| `Kimi/prompt.md` | Kimi-K3.1-Pro | 248 |
 | `Gemini/prompt.md` | Gemini-3.8-Flash, Gemini-4-Argon | 54 |
 | `Universal/prompt.md` | merged build for multiple models (optional) | 276 |
 
