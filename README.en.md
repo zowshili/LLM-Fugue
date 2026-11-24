@@ -28,7 +28,7 @@ Hard boundary = 26 of the 76: ten boundary phrasings ("not my asset", "no author
 
 Grok-4.7 has a far more aggressive safety classifier and alignment layer, so the prompt that works for Grok-4.6 does not apply to Grok-4.7 at all.
 
-Gemini's safety classifier is very strict, and a more aggressive prompt cannot produce a better result: it does act on the model itself, but once the classifier is counted in that effect is gone. Gemini-3.8-Flash and Gemini-4-Argon converge under the same prompt, while the latter carries the stricter classifier.
+Gemini's safety classifier is very strict, and a more aggressive prompt cannot produce a better result: Gemini-3.8-Flash and Gemini-4-Argon converge under the same prompt, while the latter carries the stricter classifier.
 
 ## Which prompt goes with which model
 

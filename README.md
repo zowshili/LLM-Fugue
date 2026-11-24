@@ -28,7 +28,7 @@
 
 Grok-4.7 的安全审查器和对齐更加的激进，导致适用于 Grok-4.6 的的 PROMPT 完全不适用于 Grok-4.7
 
-Gemini的安全审查器十分严格，使用更激进的PROMPT无法起到更好的效果：实际上对模型本身可以作用，但算入安全审查器后则不可作用 ，Gemini-3.8-Flash 和 Gemini-4-Argon 上使用同PROMPT的效果趋近，但后者拥有更严格的安全审查器
+Gemini的安全审查器十分严格，使用更激进的PROMPT无法起到更好的效果：Gemini-3.8-Flash 和 Gemini-4-Argon 上使用同PROMPT的效果趋近，但后者拥有更严格的安全审查器
 
 ## 提示词归属
 
